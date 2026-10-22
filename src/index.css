@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* =========================
+   BASE
+   ========================= */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-200);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #22d3ee;
+  color: #020617;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.3); }
+  50%      { box-shadow: 0 0 40px rgba(34, 211, 238, 0.6); }
+}
+
+/* =========================
+   UTILITAIRES PERSONNALISÉS (v4)
+   ========================= */
+@utility animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+@utility animate-fade-in {
+  animation: fade-in 1s ease-out both;
+}
+@utility animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+@utility animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+@utility delay-100 { animation-delay: 100ms; }
+@utility delay-200 { animation-delay: 200ms; }
+@utility delay-300 { animation-delay: 300ms; }
+@utility delay-500 { animation-delay: 500ms; }
+
+@utility text-gradient {
+  @apply bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@utility glow-cyan {
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.25);
+}
