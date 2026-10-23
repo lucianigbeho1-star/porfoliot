@@ -16,7 +16,7 @@ export default function Navbar() {
           {/* Avatar */}
           <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-cyan-400/60 transition group-hover:border-cyan-400">
             <img
-              src="public/WhatsApp Image 2026-06-01 at 14.21.46 (4).jpeg"
+              src="/luciani-gbeho.jpeg"
               alt={profile.name}
               className="h-full w-full object-cover"
               onError={(e) => {
