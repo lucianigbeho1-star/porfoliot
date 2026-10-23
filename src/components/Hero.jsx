@@ -76,7 +76,7 @@ export default function Hero() {
             {/* Photo */}
             <div className="relative h-72 w-72 overflow-hidden rounded-full border-4 border-cyan-400/40 shadow-2xl md:h-80 md:w-80">
               <img
-                src="public/WhatsApp Image 2026-06-01 at 14.21.46 (4).jpeg"
+                src="/luciani-gbeho.jpeg"
                 alt={`Photo de ${profile.name}`}
                 className="h-full w-full object-cover"
                 onError={(e) => {
@@ -86,7 +86,7 @@ export default function Hero() {
                     "bg-slate-800", "text-slate-500", "text-sm"
                   );
                   e.currentTarget.parentElement.textContent =
-                    "Ajoute ta photo dans /public/photo.jpg";
+                    "Ajoute ta photo dans /public/luciani-gbeho.jpeg";
                 }}
               />
             </div>
